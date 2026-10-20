@@ -1,2 +1,3 @@
 # Journal
-Write your Journal questions and notes here.
+Phase 1 - 
+In this phase, I created a Song class with a title, artist, and duration to store information about each song. I also created a SinglyLinkedList class with a private inner Node class. Each node holds a song and a reference to the next node in the list. I implemented the addLast() method to add songs to the end of the list and the display() method to print each song using the toString() method. I tested my program by adding three songs and verified that they displayed in the correct order. A linked list stores its elements differently from an array. An array stores elements in indexed positions, while a linked list uses nodes that connect to one another through references. Each node points to the next node, allowing the list to keep track of its elements. In my program, I used this connection to link the three songs together and display them in order.
