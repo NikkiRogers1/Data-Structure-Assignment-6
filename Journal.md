@@ -4,3 +4,6 @@ In this phase, I created a Song class with a title, artist, and duration to stor
 
 Phase 2 -
 When remove() is called, it unlinks a node by changing the references so the list skips over the song being removed. If the song is the first node, the head reference is updated to point to the next node. If the song is somewhere else in the list, the previous node's next reference is changed to point to the node after the one being removed. The iterator keeps track of its position by storing references to the current node, the last node returned, and the previous node. This helps it keep its place in the list while removing a song. After a node is removed, the iterator updates its references so it can continue moving through the list without losing track of the remaining songs. 
+
+Phasae 3 - 
+Inserting a song into the middle of a linked list is O(n) because you have to go through the list to find the right spot. Once you find it, connecting the new node takes O(1) time. Inserting a song into the middle of an array-based list is also O(n) because you may need to shift other elements to make room. Both take O(n) time overall, but an array-based list may require more operations because you have to shift multiple elements. A linked list only needs to change two links once it reaches the right spot.
