@@ -7,3 +7,7 @@ When remove() is called, it unlinks a node by changing the references so the lis
 
 Phasae 3 - 
 Inserting a song into the middle of a linked list is O(n) because you have to go through the list to find the right spot. Once you find it, connecting the new node takes O(1) time. Inserting a song into the middle of an array-based list is also O(n) because you may need to shift other elements to make room. Both take O(n) time overall, but an array-based list may require more operations because you have to shift multiple elements. A linked list only needs to change two links once it reaches the right spot.
+
+Phase 4- 
+The benefit of using a separate SortedLinkedList class instead of having a single list with an addSorted() method is that the list automatically keeps songs in the correct order whenever I use add(). With a single list, I would have to remember to call addSorted() when I want to insert a song in sorted order. Using a Comparator in the constructor also lets me choose different sorting rules, such as title, artist, or duration, without rewriting the class. This makes my code easier to reuse and more flexible.
+

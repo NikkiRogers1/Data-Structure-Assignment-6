@@ -1,4 +1,5 @@
 
+import java.util.Comparator;
 import java.util.Iterator;
 
 //Demonstrates creating a playlist and removing songs using an iterator.
@@ -79,8 +80,41 @@ public class Main {
         for (Song song :playlist) {
             System.out.println(song);
         }
+
+            // Creates a list that sorts songs alphabetically by title.
+SortedLinkedList titlePlaylist = new SortedLinkedList(
+    Comparator.comparing(song -> song.title)
+);
+
+// Adds songs in an unsorted order.
+titlePlaylist.add(0, song2);
+titlePlaylist.add(1, song3);
+titlePlaylist.add(2, song1);
+titlePlaylist.add(3, song4);
+
+// Displays the playlist sorted by title.
+System.out.println("\nPlaylist Sorted by Title:");
+
+for (Song song : titlePlaylist) {
+    System.out.println(song);
+}
+
+SortedLinkedList artistPlaylist = new SortedLinkedList(
+    Comparator.comparing(song -> song.artist));
+
+    // Adds songs in an unsorted order.
+    artistPlaylist.add(0, song1);
+    artistPlaylist.add(1, song2);
+    artistPlaylist.add(2, song3);
+    artistPlaylist.add(3, song4);
+
+    System.out.println("\n Playlist Sorted by Artist: ");
+
+    for (Song song : artistPlaylist) {
+        System.out.println(song);
     }
 
 
     }
 
+}
