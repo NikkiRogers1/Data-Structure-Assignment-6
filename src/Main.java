@@ -20,13 +20,14 @@ public class Main {
         //Adds each song to the end of the linked list.
         playlist.addLast(song1);
         playlist.addLast(song2);
-        playlist.addLast(song3);
+        playlist.add(0, song4);
+       // playlist.addLast(song3);
         //Inserting Billie Jean at index 1, shifting the other songs forward.
-        playlist.add(1,song4);
+       // playlist.add(1,song4);
 
         //Retrieves the song at index 2 and displays it.
-        Song retrievedSong = playlist.get(2);
-        System.out.println("Retrieved Song: " + retrievedSong);
+       // Song retrievedSong = playlist.get(2);
+      // System.out.println("Retrieved Song: " + retrievedSong);
 
         //Displays the playlist after inserting Billie Jean.
         System.out.println("Original Playlist:");
@@ -69,12 +70,12 @@ public class Main {
             Song song = iterator2.next();
 
             //Remove Imagine when matching title found.
-            if (song.title.equals("Imagine")) {
+            if (song.title.equals("Billie Jean")) {
                 iterator2.remove();
                 break;
             }
         }
-        System.out.println("\nPlaylist After Removing Imagine:");
+        System.out.println("\nPlaylist After Removing Billie Jean:");
 
         //Display the remaining songs.
         for (Song song :playlist) {
